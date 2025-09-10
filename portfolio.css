@@ -227,7 +227,7 @@ html {
 }
 
 .hero-primary {
-    background: url('images/yessir.jpg') center/cover;
+    background: url('./yessir.jpg') center/cover;
 }
 
 .hero-secondary {
@@ -317,7 +317,7 @@ section {
 
 .about-photo {
     height: 400px;
-    background: url("images/coding-setup.jpg") center/cover;
+    background: url("./coding-setup.jpg") center/cover;
     border-radius: 20px;
     border: 3px solid var(--border-color);
 }
@@ -439,15 +439,15 @@ section {
 }
 
 .lalam-bg {
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('images/game.jpg') center/cover;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('./game.jpg') center/cover;
 }
 
 .gesture-bg {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/handgesture.jpg') center/cover;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./handgesture.jpg') center/cover;
 }
 
 .voice-bg, .creative-bg {
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/voice.jpg') center/cover;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('./voice.jpg') center/cover;
 }
 
 .project-content {
@@ -526,7 +526,7 @@ section {
 
 .certificate-image {
     height: 300px;
-    background: url('images/lalam.jpg') center/cover;
+    background: url('./lalam.jpg') center/cover;
     border-radius: 15px;
     border: 3px solid var(--border-color);
 }
@@ -743,3 +743,4 @@ section {
         padding: 1.5rem;
     }
 }
+
