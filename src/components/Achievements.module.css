@@ -1,0 +1,143 @@
+.wins {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.winCard {
+  overflow: hidden;
+  padding: 0;
+}
+
+.winImage {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+
+.winImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.winCard:hover .winImage img {
+  transform: scale(1.05);
+}
+
+.winBadge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #f59e0b;
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  padding: 5px 12px;
+  border-radius: 100px;
+  backdrop-filter: blur(8px);
+}
+
+.winContent {
+  padding: 24px;
+}
+
+.winTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.winVenue {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent-2);
+  margin-bottom: 12px;
+}
+
+.winDesc {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.techRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tech {
+  font-size: 0.74rem;
+  font-weight: 500;
+  color: var(--accent-2);
+  background: rgba(108, 99, 255, 0.08);
+  border: 1px solid rgba(108, 99, 255, 0.2);
+  padding: 3px 9px;
+  border-radius: 100px;
+}
+
+.participantTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+}
+
+.participantGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.participantCard {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.partEmoji {
+  font-size: 1.6rem;
+  flex-shrink: 0;
+}
+
+.partEvent {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.partVenue {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.certLink {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent);
+  transition: color 0.2s;
+}
+
+.certLink:hover {
+  color: var(--accent-2);
+}
+
+@media (max-width: 900px) {
+  .wins { grid-template-columns: 1fr; }
+  .participantGrid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .participantGrid { grid-template-columns: 1fr; }
+}

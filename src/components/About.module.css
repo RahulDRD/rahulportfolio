@@ -1,0 +1,128 @@
+.about {
+  background: var(--bg-secondary);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.imageWrap {
+  position: relative;
+}
+
+.imageBorder {
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  position: relative;
+  z-index: 1;
+}
+
+.image {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.imageBorder:hover .image {
+  transform: scale(1.04);
+}
+
+.imageGlow {
+  position: absolute;
+  inset: -20px;
+  background: radial-gradient(ellipse at center, rgba(108, 99, 255, 0.2) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.textCol {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.para {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+
+.highlight {
+  color: var(--accent-2);
+  font-weight: 600;
+}
+
+.stats {
+  display: flex;
+  gap: 24px;
+  margin: 24px 0 32px;
+  flex-wrap: wrap;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 16px 20px;
+  min-width: 100px;
+  transition: border-color 0.2s;
+}
+
+.stat:hover {
+  border-color: var(--border-accent);
+}
+
+.statValue {
+  font-size: 1.8rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.statLabel {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.actions {}
+
+.resumeBtn {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.925rem;
+  font-weight: 600;
+  color: var(--accent-2);
+  border: 1px solid var(--border-accent);
+  padding: 12px 24px;
+  border-radius: 100px;
+  background: rgba(108, 99, 255, 0.06);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.resumeBtn:hover {
+  background: rgba(108, 99, 255, 0.14);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .image { height: 300px; }
+}

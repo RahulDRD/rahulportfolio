@@ -1,0 +1,154 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 20px 24px;
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+  padding: 12px 24px;
+  background: rgba(8, 11, 20, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 4px 32px rgba(0,0,0,0.4);
+}
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  flex-shrink: 0;
+}
+
+.logoAccent {
+  color: var(--accent);
+}
+
+.links {
+  display: flex;
+  list-style: none;
+  gap: 4px;
+}
+
+.navLink {
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 8px 14px; /* Added padding to match original .link */
+  border-radius: 8px; /* Added border-radius to match original .link */
+}
+
+.navLink:hover, .navLink.active {
+  color: var(--text-primary);
+}
+
+.navLink.active {
+  text-shadow: 0 0 10px var(--accent-glow);
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: 4px; /* Adjusted bottom to match original .underline */
+  left: 50%; /* Adjusted left to match original .underline */
+  transform: translateX(-50%); /* Adjusted transform to match original .underline */
+  width: 0%;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+  box-shadow: 0 0 8px var(--accent);
+  border-radius: 2px; /* Added border-radius to match original .underline */
+}
+
+.navLink:hover::after, .navLink.active::after {
+  width: 20px; /* Adjusted width to match original .link:hover .underline */
+}
+
+.ctaBtn {
+  flex-shrink: 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  padding: 10px 22px;
+  border-radius: 100px;
+  transition: opacity 0.2s, box-shadow 0.2s, transform 0.2s;
+  box-shadow: 0 4px 16px var(--accent-glow);
+}
+
+.ctaBtn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 24px var(--accent-glow);
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  padding: 4px;
+}
+
+.mobileMenu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 16px;
+  right: 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  backdrop-filter: blur(20px);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mobileLink {
+  font-size: 0.925rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  transition: color 0.2s, background 0.2s;
+}
+
+.mobileLink:hover {
+  color: var(--text-primary);
+  background: rgba(108,99,255,0.08);
+}
+
+.mobileCta {
+  display: block;
+  text-align: center;
+  margin-top: 8px;
+  font-size: 0.925rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  padding: 12px;
+  border-radius: 100px;
+}
+
+@media (max-width: 768px) {
+  .links, .ctaBtn { display: none; }
+  .hamburger { display: block; }
+}
